@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-GeneExplorer::Application.config.secret_key_base = 'fa4cfd2064569d37e55486c7db9bc082ed2af47f985ca3e7fc63d0f3a30ccc6f9483c0700babfd43042806214a3e4b342279341bd22df074c8e2806f937ce339'
+GeneExplorer::Application.config.secret_key_base = 'cb8431f17818e08c4a910d958a2a17a870eeda65b3daa4246ec36b6d1a7f7258071d84632a2c9b1856516842e43e0441a965b046b32e3d6fa5d79a216bba368e'

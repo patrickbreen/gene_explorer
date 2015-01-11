@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GeneExplorer</title>
+  <title>GeneDB</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- The navbar -->
+<%= render "layouts/navbar" %>
 
-<%= yield %>
+<!-- The sidebar -->
+<div class="sidebar">
+  <div class="well">
+    <%= render "layouts/sidebar" %>
+  </div>
+</div>
+
+<!-- The main panel -->
+<div class="main_panel">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="well">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- The footer -->
+<div class="footer">
+  <%= render "layouts/footer" %>
+</div>
 
 </body>
 </html>

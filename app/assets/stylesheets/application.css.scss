@@ -11,3 +11,29 @@
  *= require_self
  *= require_tree .
  */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+
+
+.sidebar {
+  width: 25em;
+  float: left;
+  left: 0em;
+  top: 7em;
+}
+
+
+.main_panel {
+  float: left;
+  left: 25em;
+  top: 7em;
+  width: 70em;
+}
+
+.footer   {
+  clear: both;
+  margin: 100px 50px;
+}
