@@ -5,7 +5,9 @@ describe User do
 		{
 			first_name: "Patrick",
 			last_name: "Breen",
-			email: "pbreen@uga.edu"
+			email: "pbreen@something.edu",
+			password: "password",
+			password_confirmation: "password"
 		}
 	}
 	context 'validations' do
@@ -19,6 +21,10 @@ describe User do
 
 		it 'requires a unique email' do
 			expect(user).to validate_uniqueness_of(:email)
+		end
+		it 'requres a well-formatted email' do
+			user.email = 'patrick'
+			expect(user).to_not be_valid
 		end
 	end	
 end

@@ -1,1 +1,6 @@
 Welcome to the home page
+<%if @current_user%>
+<p>you are logged in</p>
+<%end%>
+<%if !@current_user%>
+<%end%>
