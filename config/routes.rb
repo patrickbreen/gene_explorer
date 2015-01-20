@@ -1,6 +1,15 @@
 GeneExplorer::Application.routes.draw do
+  
+
+  resources :products
+
+
   resources :user_sessions, only: [:new, :create, :destroy]
-  resources :users
+
+  resources :users do
+    resources :orders
+    resources :shopping_carts
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,6 +17,7 @@ GeneExplorer::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'home#index'
+   get 'about/' => 'home#about'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
